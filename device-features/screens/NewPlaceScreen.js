@@ -9,13 +9,13 @@ const NewPlaceScreen = props => {
     const [titleValue, setTitleValue] = useState('');
 
     const titleChangeHandler = text => {
-        setTitleValue(text)
+        setTitleValue(text) 
     }
 
     const dispatch = useDispatch();
 
     const savePlaceHandler = () => {
-        dispatch(placesActions.addPlace(title));
+        dispatch(placesActions.addPlace(titleValue));
         props.navigation.goBack();
     }
     return (
