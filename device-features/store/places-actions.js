@@ -8,7 +8,6 @@ export const addPlace = (title, image) => {
     return async dispatch => {
         const fileName = image.split('/').pop();
         const newPatch = FileSystem.documentDirectory + fileName;
-        console.log(newPatch)
         try {
 
             await FileSystem.moveAsync({
@@ -45,7 +44,6 @@ export const loadPlaces = () => {
     return async dispatch => {
         try {
             const dbResult = await fetchPlaces();
-            console.log(dbResult)
             dispatch({
                 type: SET_PLACES,
                 places: dbResult.rows._array
