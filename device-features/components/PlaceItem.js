@@ -4,6 +4,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Colors from '../constants/Colors'
 
 const PlaceItem = props => {
+    console.log(props)
     return (
         <TouchableOpacity
             onPress={props.onSelect}
