@@ -1,10 +1,12 @@
 class Place {
     constructor(
         id,
-        title
+        title,
+        imageUri
     ) {
         this.id = id;
-        this.title = title
+        this.title = title,
+        this.imageUri = imageUri
     }
 }
 
